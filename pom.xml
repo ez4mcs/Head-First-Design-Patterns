@@ -39,11 +39,12 @@
   </build>
         
   <profiles>
+    
     <profile>
-      <id>command-party</id>
+      <id>commandparty</id>
       <activation>
         <property>
-          <name>command-party</name>
+          <name>commandparty</name>
         </property>
       </activation>
       <build>
@@ -72,13 +73,12 @@
         </pluginManagement>
       </build>
     </profile>
-  
 
     <profile>
-      <id>command-simpleremote</id>
+      <id>simplecommand</id>
       <activation>
         <property>
-          <name>command-simpleremote</name>
+          <name>simplecommand</name>
         </property>
       </activation>
       <build>
@@ -107,6 +107,74 @@
         </pluginManagement>
       </build>
     </profile>
-  </profiles>
 
+    <profile>
+      <id>state</id>
+      <activation>
+        <property>
+          <name>state</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.2.0</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>java</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <mainClass>headfirst.designpatterns.state.gumballstatewinner.GumballMachineTestDrive</mainClass>
+                <arguments>
+                  <argument></argument>
+                  <argument></argument>
+                </arguments>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+
+    <profile>
+      <id>commandstate</id>
+      <activation>
+        <property>
+          <name>commandstate</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.2.0</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>java</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <mainClass>headfirst.designpatterns.commandstate.gumballstatewinner.GumballMachineTestDrive</mainClass>
+                <arguments>
+                  <argument></argument>
+                  <argument></argument>
+                </arguments>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  
+  </profiles>
 </project>

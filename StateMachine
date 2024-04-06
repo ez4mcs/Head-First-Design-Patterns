@@ -1,0 +1,9 @@
+LLM State Machine
+functions:
+Use Tokens
+Add Tokens
+Failover
+
+states:
+Has Tokens
+No Tokens
